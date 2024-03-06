@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Fonts -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Aldrich" media="all">
-
-    <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <script src="https://kit.fontawesome.com/1bf067c1d8.js" crossorigin="anonymous"></script>
-</head>
-<body>
-<div style="font-family: Aldrich">
+<x-main-layout>
     <!-- hero -->
     <div class="relative bg-white overflow-hidden bg-gray-800">
         <div class="max-w-7xl mx-auto">
@@ -222,8 +205,8 @@
 
     <!-- Panel SlideOver -->
     <div x-data="{ open: false }"
-         @keydown.window.escape="open = false"
-         x-show="open" class="relative z-10" aria-labelledby="slide-over-title" x-ref="dialog" aria-modal="true">
+        @keydown.window.escape="open = false"
+        x-show="open" class="relative z-10" aria-labelledby="slide-over-title" x-ref="dialog" aria-modal="true">
 
         <div x-show="open" x-transition:enter="ease-in-out duration-500" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in-out duration-500" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-description="Background backdrop, show/hide based on slide-over state." class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 
@@ -303,10 +286,5 @@
             </div>
         </div>
     </div>
-</div>
 
-
-<!-- Sweetalert 2 -->
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</body>
-</html>
+</x-main-layout>
