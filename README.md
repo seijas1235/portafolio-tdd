@@ -7,60 +7,58 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# Proyecto Portafolio con Laravel, Livewire y TDD
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Este es un proyecto de portafolio desarrollado con el framework PHP Laravel, utilizando Livewire para la interactividad del front-end y siguiendo la metodología de Desarrollo Guiado por Pruebas (TDD).
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Descripción
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+El proyecto tiene como objetivo proporcionar una plataforma para mostrar tus habilidades, proyectos y experiencia en un formato atractivo y fácil de navegar. Utiliza tecnologías modernas como Livewire para una experiencia de usuario interactiva y Laravel para la construcción del backend.
 
-## Learning Laravel
+## Funcionalidades
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Registro e inicio de sesión de usuarios.
+- CRUD (Crear, Leer, Actualizar, Eliminar) de proyectos.
+- Visualización de proyectos en el portafolio.
+- Interfaz de usuario intuitiva y atractiva.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Requisitos
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- PHP >= 8.1
+- Composer
+- Node.js y NPM
+- MySQL
 
-## Laravel Sponsors
+## Instalación
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+1. Clona el repositorio: `git clone https://github.com/tu_usuario/tu_proyecto.git`
+2. Instala las dependencias PHP: `composer install`
+3. Copia el archivo de configuración `.env.example` y renómbralo a `.env`
+4. Genera una nueva clave de aplicación: `php artisan key:generate`
+5. Configura tu base de datos en el archivo `.env`
+6. Ejecuta las migraciones: `php artisan migrate`
+7. Instala las dependencias de JavaScript: `npm install`
+8. Compila los assets: `npm run dev`
+9. Inicia el servidor de desarrollo: `php artisan serve`
 
-### Premium Partners
+## Uso
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Una vez que hayas seguido los pasos de instalación, puedes acceder al proyecto en tu navegador ingresando a `http://localhost:8000`.
 
-## Contributing
+## Contribución
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Si deseas contribuir al proyecto, sigue estos pasos:
 
-## Code of Conduct
+1. Haz un fork del repositorio
+2. Crea una nueva rama (`git checkout -b feature/nueva-caracteristica`)
+3. Realiza tus cambios y haz commits (`git commit -am 'Agrega una nueva característica'`)
+4. Haz push a la rama (`git push origin feature/nueva-caracteristica`)
+5. Crea un nuevo Pull Request
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Licencia
 
-## Security Vulnerabilities
+Este proyecto está licenciado bajo la [Licencia MIT](https://opensource.org/licenses/MIT).
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+¡Gracias por revisar nuestro proyecto! Si tienes alguna pregunta o sugerencia, no dudes en crear un issue o ponerte en contacto con nosotros.
