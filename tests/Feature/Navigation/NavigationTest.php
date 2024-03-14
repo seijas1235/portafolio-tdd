@@ -4,6 +4,7 @@ namespace Tests\Feature\Navigation;
 
 use App\Http\Livewire\Navigation\Navigation;
 use App\Models\NavItem;
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Livewire\Livewire;
@@ -22,5 +23,13 @@ class NavigationTest extends TestCase
         Livewire::test(Navigation::class)
         ->assertSee($items->first()->label)
         ->assertSee($items->first()->url);
+    }
+    /** @test  */
+    public function only_admin_can_see_navigation_action(){
+        $user=User::factory()->create();
+        Livewire::actingAs($user)->test(Navigation::class)
+        ->assertStatus(200)
+        ->assertSee(__('Edit'))
+        ->assertSee(__('New'));
     }
 }
